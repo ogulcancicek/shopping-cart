@@ -1,5 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;500&display=swap');
+
 *,html{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
+}
+
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.homepage{
+  width: 100vw;
+  height: 100vh;
+  background: url('../src/assets/images/homepage-background.jpg') no-repeat center center fixed;
+}
+
+nav{
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  color: rgb(206, 206, 206);
+  background: rgb(150,150,150);
+background: linear-gradient(180deg, rgba(150,150,150,0.06066176470588236) 0%, rgba(0,212,255,0) 100%, rgba(9,9,121,0) 100%);
+  
+  font-family: 'Dosis', sans-serif;
+}
+
+.nav-items{
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 100px;
+  font-size: 1.8rem;
+}
+
+.text-logo{
+  cursor: pointer;
+  font-size: 2.5rem;
+}
+
+.nav-item{
+  cursor: pointer;
+  color: rgb(206, 206, 206);
+}
+
+.text-logo:hover,
+.nav-item:hover{
+  color:rgb(255, 111, 0);
+}
+
+.repo-github{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin: 20px;
+  font-size: 2rem;
+  color: rgb(206, 206, 206);
+  cursor: pointer;
+}
+
+.repo-link{
+  color: rgb(206, 206, 206);
+}
+
+.repo-github:hover .repo-link{
+  color: rgb(255, 111, 0);
+}
+
+.repo-github:hover{
+  background-color: rgba(0,0,0, 0.1);
+}
+
+.products-page-container{
+  margin-top: 80px;
 }
