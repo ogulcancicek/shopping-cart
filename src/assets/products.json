@@ -4,49 +4,49 @@
             "id": 1,
             "name": "Samurai Outfit",
             "price": 89.90,
-            "img": "../images/1.jpeg"
+            "img": "./../images/1.jpeg"
         },
         {
             "id": 2,
             "name": "'Take A Bath' Outfit",
             "price": 45.90,
-            "img": "../images/2.jpeg"
+            "img": "./../images/2.jpeg"
         },
         {
             "id": 3,
             "name": "Japan Cat Outfit",
             "price": 99.90,
-            "img": "../images/3.jpeg"
+            "img": "./../images/3.jpeg"
         },
         {
             "id": 4,
             "name": "Super Cat Outfit",
             "price": 42.90,
-            "img": "../images/4.jpeg"
+            "img": "./../images/4.jpeg"
         },
         {
             "id": 5,
             "name": "Artist Cat Outfit",
             "price": 32.90,
-            "img": "../images/5.jpeg"
+            "img": "./../images/5.jpeg"
         },
         {
             "id": 6,
             "name": "Cool Cat Outfit",
             "price": 18.90,
-            "img": "../images/6.jpeg"
+            "img": "./../images/6.jpeg"
         },
         {
             "id": 7,
             "name": "Award Cat Outfit",
             "price": 75.90,
-            "img": "../images/7.jpeg"
+            "img": "./../images/7.jpeg"
         },
         {
             "id": 8,
             "name": "Cool Cat Outfit 2",
             "price": 18.90,
-            "img": "../images/8.jpeg"
+            "img": "./../images/8.jpeg"
         }
     ]
 }
