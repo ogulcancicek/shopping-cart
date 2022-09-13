@@ -11,10 +11,9 @@ const ProductPage = ({productList, addToCart}) => {
     },[])
 
     const findItem = (id) => productList.find((product) => product.id === id);
-
     return (
         <div className="s-product-container">
-                <img src={product.img} alt={product.name} className="s-product-img"/>
+                <img src={'.' + product.img} alt={product.name} className="s-product-img"/>
             <div className='info-option-container'>
                 <div className='infos'>
                     <h4 className='s-product-name'>{product.name}</h4>
