@@ -12,12 +12,12 @@ const Main = ({cartItems, addToCart, removeItemFromCart, increaseQuantity, decre
 
     return (
         <Routes>
-            <Route exact path='/' element={<Homepage /> }/>
-            <Route exact path='/products' element={<Products productList={loadProducts()}/> } />
-            <Route  path='/products/:id' element={<ProductPage 
+            <Route exact path='/shopping-cart' element={<Homepage /> }/>
+            <Route exact path='/shopping-cart/products' element={<Products productList={loadProducts()}/> } />
+            <Route  path='/shopping-cart/products/:id' element={<ProductPage 
                                                         productList={loadProducts()} 
                                                         addToCart={addToCart}/> }/>
-            <Route  path='/cart' element={<ShoppingCart
+            <Route  path='/shopping-cart/cart' element={<ShoppingCart
                                                         cartItems={cartItems}
                                                         removeItemFromCart={removeItemFromCart}
                                                         increaseQuantity={increaseQuantity}

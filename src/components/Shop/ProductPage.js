@@ -23,7 +23,7 @@ const ProductPage = ({productList, addToCart}) => {
                     <button className='order-button' onClick={ () => {
                         addToCart(product)
                     }}>Add to Cart!</button>
-                    <Link to={'/products'}>
+                    <Link to={'/shopping-cart/products'}>
                         <button className='back-button'>
                             <i className="fa-solid fa-arrow-left"></i> Go Back
                         </button>
