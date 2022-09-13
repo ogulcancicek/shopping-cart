@@ -5,7 +5,7 @@ const Homepage = () => {
         <div className="homepage">
             <div className="repo-github">
                 <a href="https://github.com/ogulcancicek" className='repo-link'>
-                    <i class="fa-solid fa-code"></i>
+                    <i className="fa-solid fa-code"></i>
                 </a>
             </div>
         </div>

@@ -21,6 +21,15 @@ body{
     color: rgb(206, 206, 206);
 }
 
+.product-container > a{
+    color: rgb(206, 206, 206);
+}
+
+.product-container > a:hover{
+    color: rgb(255, 111, 0);
+    text-decoration: underline;
+}
+
 .product-img{
     width: 100%;
     cursor: pointer;

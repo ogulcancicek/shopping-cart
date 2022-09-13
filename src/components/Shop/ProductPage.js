@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './shop.css';
 
 const ProductPage = ({productList}) => {
@@ -21,9 +22,11 @@ const ProductPage = ({productList}) => {
                 </div>
                 <div className='options'>
                     <button className='order-button'>Add to Cart!</button>
-                    <button className='back-button'>
-                        <i className="fa-solid fa-arrow-left"></i> Go Back
-                    </button>
+                    <Link to={'/products'}>
+                        <button className='back-button'>
+                            <i className="fa-solid fa-arrow-left"></i> Go Back
+                        </button>
+                    </Link>
                 </div>
             </div>
         </div>
