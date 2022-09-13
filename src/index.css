@@ -84,3 +84,19 @@ nav{
 .repo-github:hover{
   background-color: rgba(0,0,0, 0.1);
 }
+
+@media screen and (max-width: 650px){
+  nav{
+    height: 50px;
+  }
+  .nav-items{
+    margin-top: 10px;
+    gap: 20px;
+    font-size: 1.3rem;
+  }
+  
+  .text-logo{
+    cursor: pointer;
+    font-size: 1.8rem;
+  }
+}
