@@ -57,6 +57,21 @@ nav{
   color:rgb(255, 111, 0);
 }
 
+.cart-item{
+  position: relative;
+}
+
+.item-counter{
+  position: absolute;
+  top: 8px;
+  left: 14px;
+  color: rgb(0, 0, 0);
+  font-family: 'Montserrat', sans-serif;
+}
+.item-counter > h4{
+  font-size: 1rem;
+}
+
 .repo-github{
   position: absolute;
   bottom: 0;

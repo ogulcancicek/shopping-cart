@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './shop.css';
 
-const ProductPage = ({productList}) => {
+const ProductPage = ({productList, addToCart}) => {
     const [product, setProduct] = useState({});
     const id = Number(useParams().id);
     useEffect( () => {
@@ -21,7 +21,9 @@ const ProductPage = ({productList}) => {
                     <p className='s-product-price'>{product.price} USD</p>
                 </div>
                 <div className='options'>
-                    <button className='order-button'>Add to Cart!</button>
+                    <button className='order-button' onClick={ () => {
+                        addToCart(product)
+                    }}>Add to Cart!</button>
                     <Link to={'/products'}>
                         <button className='back-button'>
                             <i className="fa-solid fa-arrow-left"></i> Go Back
