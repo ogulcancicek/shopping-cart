@@ -54,7 +54,6 @@ function App() {
   }
 
   return (
-    <>
       <Router>
         <Navbar itemCounter={calculateTotalItem()}/>
         <Main 
@@ -66,7 +65,6 @@ function App() {
           calculateTotal={calculateTotal}
         />
       </Router>
-    </>
   );
 }
 

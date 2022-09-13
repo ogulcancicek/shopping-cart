@@ -11,7 +11,6 @@ const Main = ({cartItems, addToCart, removeItemFromCart, increaseQuantity, decre
     }
 
     return (
-        <>
         <Routes>
             <Route exact path='/' element={<Homepage /> }/>
             <Route exact path='/products' element={<Products productList={loadProducts()}/> } />
@@ -27,7 +26,6 @@ const Main = ({cartItems, addToCart, removeItemFromCart, increaseQuantity, decre
                                                     /> }/>
             <Route  path='*' element={<Homepage /> }/>
         </Routes>
-        </>
     );
 }
 
