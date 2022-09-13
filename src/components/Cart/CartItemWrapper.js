@@ -13,7 +13,7 @@ const CartItemWrapper = ({product, increaseQuantity, decreaseQuantity, removeIte
                     <input type='button' value='-' className='qtybutton minus' onClick={() => {
                                                                                               decreaseQuantity(product.id)      
                                                                                             }}/>
-                    <input type='text' name='quantity' value={product['quantity']} className='qty' />
+                    <input type='text' name='quantity' value={product['quantity']} className='qty' disabled/>
                     <input type='button' value='+' className='qtybutton plus' onClick={() => {
                                                                                               increaseQuantity(product.id)      
                                                                                             }}/>

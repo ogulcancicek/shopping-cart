@@ -44,6 +44,15 @@ function App() {
     setCartItems(tempState);
   }
 
+  const calculateTotal = () => {
+    const cartItemValues = Object.values(cartItems);
+    let total = 0;
+    for(let i = 0; i < cartItemValues.length; i++) {
+      total += (cartItemValues[i]['quantity'] * cartItemValues[i]['price'])
+    }
+    return total.toFixed(2);
+  }
+
   return (
     <>
       <Router>
@@ -54,6 +63,7 @@ function App() {
           removeItemFromCart={removeItemFromCart}
           increaseQuantity={increaseQuantity}
           decreaseQuantity={decreaseQuantity}
+          calculateTotal={calculateTotal}
         />
       </Router>
     </>

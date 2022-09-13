@@ -4,7 +4,7 @@ import Products from './Shop/Products';
 import ProductPage from './Shop/ProductPage';
 import ShoppingCart from './Cart/ShoppingCart';
 
-const Main = ({cartItems, addToCart, removeItemFromCart, increaseQuantity, decreaseQuantity}) => {
+const Main = ({cartItems, addToCart, removeItemFromCart, increaseQuantity, decreaseQuantity, calculateTotal}) => {
     const loadProducts = () => {
         const data = require('../assets/products.json');
         return data.products;
@@ -23,6 +23,7 @@ const Main = ({cartItems, addToCart, removeItemFromCart, increaseQuantity, decre
                                                         removeItemFromCart={removeItemFromCart}
                                                         increaseQuantity={increaseQuantity}
                                                         decreaseQuantity={decreaseQuantity}
+                                                        calculateTotal={calculateTotal}
                                                     /> }/>
             <Route  path='*' element={<Homepage /> }/>
         </Routes>

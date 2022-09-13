@@ -2,7 +2,7 @@
     "products": [
         {
             "id": 1,
-            "name": "Samurai Outfit (Traditional) ",
+            "name": "Samurai Outfit",
             "price": 89.90,
             "img": "../images/1.jpeg"
         },
