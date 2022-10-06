@@ -1,7 +1,11 @@
 import './shoppingcart.css';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { increaseQuantity, decreaseQuantity, removeFromCart } from '../../state/actions/cart';
 
-const CartItemWrapper = ({product, increaseQuantity, decreaseQuantity, removeItemFromCart}) => {
+const CartItemWrapper = ({product}) => {
+    const dispatch = useDispatch();
+
     return (
         <div className="single-cart-item">
             <Link to={`/shopping-cart/products/${product.id}`}>
@@ -13,17 +17,11 @@ const CartItemWrapper = ({product, increaseQuantity, decreaseQuantity, removeIte
             </div>
             <div className='options'>
                 <div className='quantity-selector quantity'>
-                    <input type='button' value='-' className='qtybutton minus' onClick={() => {
-                                                                                              decreaseQuantity(product.id)      
-                                                                                            }}/>
+                    <input type='button' value='-' className='qtybutton minus' onClick={() => dispatch(decreaseQuantity(product.id))}/>
                     <input type='text' name='quantity' value={product['quantity']} className='qty' disabled/>
-                    <input type='button' value='+' className='qtybutton plus' onClick={() => {
-                                                                                              increaseQuantity(product.id)      
-                                                                                            }}/>
+                    <input type='button' value='+' className='qtybutton plus' onClick={() => dispatch(increaseQuantity(product.id))}/>
                 </div>
-                <button className="delete-btn" onClick={() => {
-                                                            removeItemFromCart(product)
-                                                            }}>Delete</button>
+                <button className="delete-btn" onClick={() => dispatch(removeFromCart(product))}>Delete</button>
             </div>
         </div>
     );

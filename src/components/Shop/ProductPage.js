@@ -1,10 +1,14 @@
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../../state/actions/cart';
 import './shop.css';
 
-const ProductPage = ({productList, addToCart}) => {
+const ProductPage = ({productList}) => {
     const [product, setProduct] = useState({});
+    const dispatch = useDispatch();
+
     const id = Number(useParams().id);
     useEffect( () => {
         setProduct(findItem(id));
@@ -20,9 +24,7 @@ const ProductPage = ({productList, addToCart}) => {
                     <p className='s-product-price'>{product.price} USD</p>
                 </div>
                 <div className='options'>
-                    <button className='order-button' onClick={ () => {
-                        addToCart(product)
-                    }}>Add to Cart!</button>
+                    <button className='order-button' onClick={() => dispatch(addToCart(product))}>Add to Cart!</button>
                     <Link to={'/shopping-cart/products'}>
                         <button className='back-button'>
                             <i className="fa-solid fa-arrow-left"></i> Go Back

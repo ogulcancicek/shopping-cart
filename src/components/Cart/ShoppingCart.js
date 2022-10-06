@@ -1,9 +1,21 @@
 import './shoppingcart.css';
 import CartItemWrapper from './CartItemWrapper';
 import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
-const ShoppingCart = ({cartItems, removeItemFromCart, increaseQuantity, decreaseQuantity, calculateTotal}) => {
+const ShoppingCart = () => {
+    const cartItems = useSelector(state => state);
     const navigate = useNavigate();
+
+    const calculateTotal = () => {
+        const cartItemValues = Object.values(cartItems);
+            let total = 0;
+            for(let i = 0; i < cartItemValues.length; i++) {
+                total += (cartItemValues[i]['quantity'] * cartItemValues[i]['price'])
+            }
+            return total.toFixed(2);
+    }
+
     return (
         <div className='container shopping-cart-container'>
                 <h4 className='cart-title'>My Cart</h4>
@@ -12,10 +24,7 @@ const ShoppingCart = ({cartItems, removeItemFromCart, increaseQuantity, decrease
                         {Object.values(cartItems).map( (cartItem) => (
                             <CartItemWrapper key={cartItem.id}
                                              product={cartItem}
-                                             increaseQuantity={increaseQuantity}
-                                             decreaseQuantity={decreaseQuantity}
-                                             removeItemFromCart={removeItemFromCart}
-                                            />
+                                             />
                         ))}
                     </div>
                     <div className='cart-info-container'>
@@ -23,7 +32,7 @@ const ShoppingCart = ({cartItems, removeItemFromCart, increaseQuantity, decrease
                             <i className="fa-solid fa-arrow-left"></i> Go Back
                         </button>
                         <div className="total-quantity-container">
-                            <p className='total-quantity'>Total {calculateTotal()} USD</p>    
+                            <p className='total-quantity'>Total {calculateTotal(cartItems)} USD</p>    
                         </div>
                         <button className="checkout-button">Checkout</button>
                     </div>

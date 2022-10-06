@@ -1,7 +1,18 @@
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 import '../index.css';
 
-const Navbar = ({itemCounter}) => {
+const Navbar = () => {
+    const cartItems = useSelector(state => state);
+    
+    const calculateTotalItem = () => {
+        let total = 0;
+        for (const item of Object.values(cartItems)) {
+            total += item['quantity'];
+        }
+        return total;
+    }
+
     return (
         <nav>
                 <Link to={"/shopping-cart"}  className="nav-item">
@@ -16,7 +27,7 @@ const Navbar = ({itemCounter}) => {
                         <Link to={'/shopping-cart/cart'}  className="nav-item">
                             <div className="cart-item">
                                 <div className="item-counter">
-                                    <h4>{(itemCounter) ? itemCounter : 0}</h4>
+                                    <h4>{(calculateTotalItem(cartItems)) ? calculateTotalItem(cartItems) : 0}</h4>
                                 </div>
                                 <i className="fa-sharp fa-solid fa-cart-shopping"></i>                                
                             </div>
