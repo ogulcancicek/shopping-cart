@@ -1,6 +1,7 @@
 .shopping-cart-container{
     margin-top: 80px;
-    color: rgb(206, 206, 206);   
+    color: rgb(206, 206, 206);
+    margin-bottom: 80px;
 }
 
 .cart-title{
@@ -172,7 +173,7 @@
     }
 
     .total-quantity{
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .checkout-button{
